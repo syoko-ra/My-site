@@ -1,0 +1,139 @@
+#btn {
+  display: none;
+}
+
+
+
+nav {
+  display: flex;
+  justify-content: right;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  background-color: #fff;
+  opacity: 0.9;
+}
+
+nav a {
+  color: #333;
+  font-size: 30px;
+  text-decoration: none;
+  padding: 10px 20px 10px 20px;
+  margin: 0 10px 0 10px;
+}
+
+nav button {
+  width: 100%;
+  height: 100%;
+}
+
+nav a:hover {
+  text-decoration: none !important;
+  background-color: #000;
+  color: #fff;
+}
+
+.small-nav {
+  display: none;
+}
+
+section:nth-of-type(even) {
+  background-color: #ddd;
+}
+
+/* 画面幅が600px以下になると適用される */
+@media screen and (max-width: 991px) {
+  .nav-title {
+    display: none;
+    /* Hide the My Site title */
+  }
+
+  #btn {
+    position: fixed;
+    top: 0px;
+    right: 5px;
+    width: 44px;
+    height: 44px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  #btn span {
+    display: block;
+    background-color: #333;
+    width: 36px;
+    height: 2px;
+    transition: all 0.5s ease;
+  }
+
+  #btn.on span {
+    background-color: #000;
+  }
+
+  #btn.on span:nth-of-type(1) {
+    transform: translateY(11px) rotate(45deg);
+  }
+
+  #btn.on span:nth-of-type(2) {
+    transform: scale(0);
+  }
+
+  #btn.on span:nth-of-type(3) {
+    transform: translateY(-12px) rotate(-45deg);
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+    top: -500px;
+
+  }
+
+  nav.on {
+    top: 0;
+  }
+
+  nav a {
+    width: 100%;
+    margin: 10px;
+    text-align: center;
+  }
+
+  .small-nav {
+    background-color: #ffffff;
+    padding: 50px 0 10px 0;
+    font-size: 30px;
+    color: #000000;
+    text-align: center;
+    display: block;
+    font-family: 'Bebas Neue', sans-serif;
+  }
+}
+
+.nav-title {
+  font-size: 40px;
+  color: #000;
+  text-align: left;
+  margin-right: auto;
+  margin-left: 20px;
+}
+
+.nav-title:hover {
+  background-color: #ffffff;
+  color: #000;
+}
+
+.back {
+  background-color: #fff;
+}
+
+nav a {
+  font-weight: bold;
+}
